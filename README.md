@@ -9,7 +9,7 @@
 
 
 Тренировочный проект проект реализован на основе laravel 8.0
-
+composer create-project --prefer-dist laravel/laravel project-name "8.*.*"
 ### 1
 
 - **инициализация проекта**
