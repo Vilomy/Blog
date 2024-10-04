@@ -17,3 +17,6 @@ composer create-project --prefer-dist laravel/laravel project-name "8.*.*"
 ### 2
 
 - **добавление моделей и миграций**
+
+### 3
+- **добавлен фронт для блога**
