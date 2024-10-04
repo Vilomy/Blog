@@ -1,4 +1,3 @@
-
 ## Blog
 после клонировании проекта
 - **composer install**
@@ -14,3 +13,7 @@ composer create-project --prefer-dist laravel/laravel project-name "8.*.*"
 
 - **инициализация проекта**
 - **поддтягивание зависимостей**
+
+### 2
+
+- **добавление моделей и миграций**
