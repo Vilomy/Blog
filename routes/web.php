@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use PHPUnit\TextUI\XmlConfiguration\Group;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,8 +23,19 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
         Route::get('/', 'IndexController');
     });
     Route::group(['namespace' => 'Category', 'prefix' => 'categories'], function () {
-        Route::get('/', 'IndexController');
+        Route::get('/', 'IndexController')->name('admin.category.index');
+        Route::get('/create', 'CreateController')->name('admin.category.create');
     });
+    Route::group(['namespace' => 'Tag', 'prefix' => 'posts'], function () {
+        Route::get('/', 'IndexController')->name('admin.tag.index');
+        Route::get('/create', 'CreateController')->name('admin.tag.create');
+    });
+    Route::group(['namespace' => 'Post', 'prefix' => 'tags'], function () {
+        Route::get('/', 'IndexController')->name('admin.post.index');
+        Route::get('/create', 'CreateController')->name('admin.post.create');
+    });
+
+    
 });
 
 Auth::routes();

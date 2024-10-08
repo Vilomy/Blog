@@ -3,7 +3,8 @@
 - **composer install**
 - **cp .env.example .env**
 - **php artisan key:generate**
-- проект создавался на базе sqlite
+- **проект создавался на базе sqlite**
+- **создать файл базы данных, подключить ее в проект**
 - **php artisan migrate**
 
 
@@ -29,3 +30,5 @@ composer create-project --prefer-dist laravel/laravel project-name "8.*.*"
 ### 5
 - **подключили админку**
 
+### 6
+- **создали category в админке**
