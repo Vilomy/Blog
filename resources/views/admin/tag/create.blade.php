@@ -20,14 +20,13 @@
     <section class="content">
         <div class="container-fluid">
             <div class="col-12">
-                <form action="#" class="w-25">
+                <form action="{{route('admin.tag.store')}}" method="post" class="w-25">
+                    @csrf
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Название Тэга">
+                        <input type="text" class="form-control" name="title" placeholder="Название Тэга">
                     </div>
+                    <input type="submit" class="btn btn-primary" value="Сохранить">
                 </form>
-                <div class="col-1">
-                    <a href="{{route('admin.tag.index')}}" class="btn btn-primary">Сохранить</a>    
-                </div>
             </div>
     </section>
 </div>

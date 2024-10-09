@@ -25,17 +25,19 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
     Route::group(['namespace' => 'Category', 'prefix' => 'categories'], function () {
         Route::get('/', 'IndexController')->name('admin.category.index');
         Route::get('/create', 'CreateController')->name('admin.category.create');
+        Route::post('/', 'StoreController')->name('admin.category.store');
     });
-    Route::group(['namespace' => 'Tag', 'prefix' => 'posts'], function () {
-        Route::get('/', 'IndexController')->name('admin.tag.index');
-        Route::get('/create', 'CreateController')->name('admin.tag.create');
-    });
-    Route::group(['namespace' => 'Post', 'prefix' => 'tags'], function () {
+    Route::group(['namespace' => 'Post', 'prefix' => 'posts'], function () {
         Route::get('/', 'IndexController')->name('admin.post.index');
         Route::get('/create', 'CreateController')->name('admin.post.create');
+        Route::post('/', 'StoreController')->name('admin.post.store');
+    });
+    Route::group(['namespace' => 'Tag', 'prefix' => 'tags'], function () {
+        Route::get('/', 'IndexController')->name('admin.tag.index');
+        Route::get('/create', 'CreateController')->name('admin.tag.create');
+        Route::post('/', 'StoreController')->name('admin.tag.store');
     });
 
-    
 });
 
 Auth::routes();

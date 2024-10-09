@@ -21,14 +21,22 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <form action="#" class="w-25">
+                    <form action="{{route('admin.category.store')}}" method="POST" class="w-25">
+                        @csrf
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Название категории">
+                            <input type="text" class="form-control" name="title" placeholder="Название категории">
+                            @error('title')
+                                <div class="text-danger">
+                                    <p>
+                                        Это поле необходимо для заполнения
+                                    </p>
+                                </div>
+                            @enderror
+
                         </div>
+                        <input type="submit" class="btn btn-primary" value="Сохранить">
                     </form>
-                    <div class="col-1">
-                        <a href="{{route('admin.category.index')}}" class="btn btn-primary">Сохранить</a>    
-                    </div>
+
                 </div>
             </div>
         </div>
