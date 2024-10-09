@@ -34,9 +34,9 @@
                             @enderror
 
                         </div>
-                        <input type="submit" class="btn btn-primary" value="Сохранить">
+                        <input type="submit" class="btn btn-primary mr-3" value="Сохранить">
+                        <a href="{{route('admin.category.index')}}" class="btn btn-second">Отмена</a>
                     </form>
-
                 </div>
             </div>
         </div>
