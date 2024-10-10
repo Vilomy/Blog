@@ -1,9 +1,9 @@
 @extends('admin.layouts.blog')
 @section('content')
 
-<!-- Content Wrapper. Contains page content -->
+
 <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
+
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
@@ -19,29 +19,40 @@
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
     </div>
-    <!-- /.content-header -->
 
-    <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
             <div class="row">
-                <div class="col-12">
-                    <div class="col-1">
-                        <a href="{{route('admin.tag.create')}}" class="btn btn-block btn-primary">Добавить</a>    
+                    <div class="col-1 mb-3">
+                        <a href="{{route('admin.tag.create')}}" class="btn btn-primary mb-3">Добавить</a>
                     </div>
-                    <p>
-                        Тэги
-                    </p>
-                </div>
-
             </div>
-            <!-- /.row -->
-
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body table-responsive p-0">
+                          <table class="table table-hover text-nowrap">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>Название</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($tags as $tag)
+                                    <tr>
+                                        <td>{{$tag->id}}</td>
+                                        <td>{{$tag->title}}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                          </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div><!-- /.container-fluid -->
     </section>
-    <!-- /.content -->
 </div>
-<!-- /.content-wrapper -->
-
 @endsection

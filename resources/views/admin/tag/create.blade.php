@@ -19,15 +19,26 @@
     </div>
     <section class="content">
         <div class="container-fluid">
-            <div class="col-12">
-                <form action="{{route('admin.tag.store')}}" method="post" class="w-25">
-                    @csrf
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="title" placeholder="Название Тэга">
-                    </div>
-                    <input type="submit" class="btn btn-primary" value="Сохранить">
-                </form>
+            <div class="row">
+                <div class="col-12">
+                    <form action="{{route('admin.tag.store')}}" method="post" class="w-25">
+                        @csrf
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="title" placeholder="Название Тэга">
+                            @error('title')
+                            <div class="text-danger">
+                                <p>
+                                    Это поле необходимо для заполнения
+                                </p>
+                            </div>
+                            @enderror
+                        </div>
+                        <input type="submit" class="btn btn-primary mr-3" value="Сохранить">
+                        <a href="{{route('admin.tag.index')}}" class="btn btn-second">Отмена</a>
+                    </form>
+                </div>
             </div>
+        </div>
     </section>
 </div>
 
