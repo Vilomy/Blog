@@ -7,8 +7,9 @@
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1 class="m-0">{{$tag->title}}</h1>
+                <div class="col-sm-6 d-flex align-items-center">
+                    <h1 class="m-0 mr-3">{{$tag->title}}</h1>
+                    <a href="{{route('admin.tag.edit', $tag->id)}}" class="text-success"><i class="fas fa-edit"></i></a>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -45,7 +46,9 @@
         </div><!-- /.container-fluid -->
     </section>
     <div class="ml-3">
-        <a href="{{route('admin.tag.index')}}" class="btn btn-primary">Вернуться к списку тэгов</a>
+        <a href="{{route('admin.tag.edit', $tag->id)}}" class="btn btn-success">Редактировать тэг</a>
+        <a href="#" class="btn btn-danger">Удалить тэг</a>
+        <a href="{{route('admin.tag.index')}}" class="btn btn-second">Вернуться к списку тэгов</a>
     </div>
 </div>
 @endsection

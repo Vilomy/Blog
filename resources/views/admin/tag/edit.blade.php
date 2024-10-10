@@ -21,8 +21,9 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <form action="#" method="post" class="w-25">
+                    <form action="{{ route('admin.tag.update', $tag->id) }}" method="post" class="w-25">
                         @csrf
+                        @method('PATCH')
                         <div class="form-group">
                             <input type="text" class="form-control" name="title" value="{{$tag->title}}" placeholder="Название Тэга">
                             @error('title')
