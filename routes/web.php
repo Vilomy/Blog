@@ -26,16 +26,19 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
         Route::get('/', 'IndexController')->name('admin.category.index');
         Route::get('/create', 'CreateController')->name('admin.category.create');
         Route::post('/', 'StoreController')->name('admin.category.store');
+        Route::get('/{category}', 'ShowController')->name('admin.category.show');
     });
     Route::group(['namespace' => 'Post', 'prefix' => 'posts'], function () {
         Route::get('/', 'IndexController')->name('admin.post.index');
         Route::get('/create', 'CreateController')->name('admin.post.create');
         Route::post('/', 'StoreController')->name('admin.post.store');
+        Route::get('/{post}', 'ShowController')->name('admin.post.show');
     });
     Route::group(['namespace' => 'Tag', 'prefix' => 'tags'], function () {
         Route::get('/', 'IndexController')->name('admin.tag.index');
         Route::get('/create', 'CreateController')->name('admin.tag.create');
         Route::post('/', 'StoreController')->name('admin.tag.store');
+        Route::get('/{tag}', 'ShowController')->name('admin.tag.show');
     });
 
 });
