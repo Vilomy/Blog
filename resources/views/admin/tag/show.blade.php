@@ -9,7 +9,14 @@
             <div class="row mb-2">
                 <div class="col-sm-6 d-flex align-items-center">
                     <h1 class="m-0 mr-3">{{$tag->title}}</h1>
-                    <a href="{{route('admin.tag.edit', $tag->id)}}" class="text-success"><i class="fas fa-edit"></i></a>
+                    <a href="{{route('admin.tag.edit', $tag->id)}}" class="text-success"><i class="fas fa-edit mr-1"></i></a>
+                    <form action="{{ route('admin.tag.delete', $tag->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="border-0 bg-transporent">
+                            <i class="fas fa-times text-danger" role="button"></i>
+                        </button>
+                    </form>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
