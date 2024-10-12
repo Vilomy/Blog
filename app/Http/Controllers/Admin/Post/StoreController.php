@@ -3,13 +3,16 @@
 namespace App\Http\Controllers\Admin\Post;
 
 use App\Http\Controllers\Controller;
-use App\Http\Request\Admin\Post;
-
+use App\Http\Requests\Admin\Post\StoreRequest;
+use App\Models\Post;
 
 class StoreController extends Controller
 {
     public function __invoke(StoreRequest $storeRequest)
     {
-        return view('admin.post.store');
+        $data = $storeRequest->validated();
+        Post::firstOrCreate($data);
+
+        return redirect()->route('admin.post.index');
     }
 }
