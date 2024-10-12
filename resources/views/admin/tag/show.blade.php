@@ -53,12 +53,6 @@
         </div><!-- /.container-fluid -->
     </section>
     <div class="ml-3 d-flex align-items-center">
-        <a href="{{route('admin.tag.edit', $tag->id)}}" class="btn btn-success">Редактировать тэг</a>
-        <form class="m-3" action="{{route('admin.tag.delete', $tag->id)}}" method="POST">
-            @csrf
-            @method('DELETE')
-            <button type="submit" class="btn btn-danger">Удалить тэг</button>
-        </form>
         <a href="{{route('admin.tag.index')}}" class="btn btn-second">Вернуться к списку тэгов</a>
     </div>
 </div>

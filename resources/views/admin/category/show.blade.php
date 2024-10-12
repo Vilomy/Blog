@@ -53,13 +53,6 @@
         </div>
     </section>
     <div class="ml-3 d-flex align-items-center" >
-        <a href="{{route('admin.category.edit', $category->id)}}" class="btn btn-success">Редактировать категорию</a>
-
-        <form class="m-3" action="{{route('admin.category.delete', $category->id)}}" method="POST">
-            @csrf
-            @method('DELETE')
-            <button type="submit" class="btn btn-danger">Удалить категорию</button>
-        </form>
         <a href="{{route('admin.category.index')}}" class="btn btn-second">Вернуться к списку категорий</a>
     </div>
 </div>

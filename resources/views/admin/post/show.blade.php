@@ -53,13 +53,6 @@
         </div>
     </section>
     <div class="ml-3 d-flex align-items-center" >
-        <a href="{{route('admin.post.edit', $post->id)}}" class="btn btn-success">Редактировать пост</a>
-
-        <form class="m-3" action="{{route('admin.post.delete', $post->id)}}" method="POST">
-            @csrf
-            @method('DELETE')
-            <button type="submit" class="btn btn-danger">Удалить пост</button>
-        </form>
         <a href="{{route('admin.post.index')}}" class="btn btn-second">Вернуться к списку постов</a>
     </div>
 </div>

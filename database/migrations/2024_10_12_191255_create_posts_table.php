@@ -17,11 +17,11 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('content');
-            $table->unsignedBigInteger('categories_id')->nullable();
+//            $table->unsignedBigInteger('categories_id')->nullable();
             $table->timestamps();
 
-            $table->index('categories_id', 'post_category_idx');
-            $table->foreign('categories_id', 'post_category_fk')->on('categories')->references('id');
+//            $table->index('categories_id', 'post_category_idx');
+//            $table->foreign('categories_id', 'post_category_fk')->on('categories')->references('id');
         });
     }
 
