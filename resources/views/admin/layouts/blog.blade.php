@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Dashboard</title>
+    <title>Blog | Gleb</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="{{asset('plugins/daterangepicker/daterangepicker.css')}}">
     <!-- Summernote -->
     <link rel="stylesheet" href="{{asset('plugins/summernote/summernote-bs4.min.css')}}">
+
+
 
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -61,7 +63,8 @@
 <script src="{{asset('plugins/jquery-ui/jquery-ui.min.js')}}"></script>
 <!-- bootstrap.bundle -->
 <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-
+<!-- bs-custom-file-input -->
+<script src= {{asset('plugins/bs-custom-file-input/bs-custom-file-input.min.js')}}></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
     $.widget.bridge('uibutton', $.ui.button)
@@ -90,7 +93,15 @@
             ]
         });
     });
+    $(function () {
+        bsCustomFileInput.init();
+    });
 </script>
 
+<style>
+    .custom-file-label::after{
+        content: "...";
+    }
+</style>
 </body>
 </html>
