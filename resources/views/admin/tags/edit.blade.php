@@ -33,7 +33,7 @@
                       @method('PATCH')
                       <div class="form-group">
                         <label for="name">Название</label>
-                        <input type="text" class="form-control" id="name" name="title" placeholder="Название Tag" value="{{ $tag->title }}">
+                        <input type="text" class="form-control" id="name" name="title" placeholder="Название тэга" value="{{ $tag->title }}">
                         @error('title')
                           <div class="text-danger">Это поле обязательное для заполнения</div>
                         @enderror

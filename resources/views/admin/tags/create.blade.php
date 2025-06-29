@@ -27,7 +27,7 @@
               @csrf
               <div class="form-group">
                 <label for="name">Название</label>
-                <input type="text" class="form-control" id="name" name="title" placeholder="Название категории">
+                <input type="text" class="form-control" id="name" name="title" placeholder="Название тэга">
                 @error('title')
                   <div class="text-danger">Это поле обязательное для заполнения</div>
                 @enderror
